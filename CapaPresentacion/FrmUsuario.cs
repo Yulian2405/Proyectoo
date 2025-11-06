@@ -100,6 +100,7 @@ namespace CapaPresentacion
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
             }
         }
@@ -128,10 +129,14 @@ namespace CapaPresentacion
             }
             else
             {
+                int CodigoUsuario = int.Parse(txtCodigoUsuario.Text);
                 //Capturar datos del formulario
-                int CodigoUsuario = Convert.ToInt32(txtCodigoUsuario.Text);
-                int CodigoRol = Convert.ToInt32(cboxCodigoRol.Text);
-                int CodigoEmpleado = Convert.ToInt32(cboxCodigoEmpleado.Text);
+                var SelectedRol = (dynamic)cboxCodigoEmpleado.SelectedItem;
+                int CodigoRol = (int)SelectedRol.GetType().GetProperty("Value").GetValue(SelectedRol, null);
+
+                var SelectedEmpleado = (dynamic)cboxCodigoEmpleado.SelectedItem;
+                int CodigoEmpleado = (int)SelectedEmpleado.GetType().GetProperty("Value").GetValue(SelectedEmpleado, null);
+
                 string NombreUsuario = txtNombreUsuario.Text;
                 double Clave = Convert.ToInt32(txtClave.Text);
                 string Estado = cboxEstado.Text;
@@ -147,6 +152,7 @@ namespace CapaPresentacion
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
 
 
@@ -178,6 +184,7 @@ namespace CapaPresentacion
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
             }
         }
