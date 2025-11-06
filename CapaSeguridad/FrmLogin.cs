@@ -105,7 +105,7 @@ namespace CapaSeguridad
                     if (validLogin == true)
                     {
                         FrmMenuPrincipal mainMenu = new FrmMenuPrincipal();
-                        MessageBox.Show("Bienvenido " + "Ingeniero Elvis");
+                        MessageBox.Show("Bienvenido " + UserCache.NombreUsuario);
                         mainMenu.Show();
                         mainMenu.FormClosed += Logout;
                         this.Hide();
