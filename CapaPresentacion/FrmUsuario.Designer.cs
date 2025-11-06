@@ -126,7 +126,7 @@
             this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUsuarios.Size = new System.Drawing.Size(949, 619);
             this.dgvUsuarios.TabIndex = 3;
-            this.dgvUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellContentClick);
+            this.dgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellClick);
             // 
             // dgvEmpleados
             // 
@@ -163,7 +163,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(1283, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(1283, 27);
             this.toolStrip1.TabIndex = 6;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -176,14 +176,14 @@
             this.btnAgregar.IconSize = 90;
             this.btnAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(99, 28);
+            this.btnAgregar.Size = new System.Drawing.Size(99, 24);
             this.btnAgregar.Text = "AGREGAR";
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // btnEditar
             // 
@@ -194,14 +194,14 @@
             this.btnEditar.IconSize = 90;
             this.btnEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(82, 28);
+            this.btnEditar.Size = new System.Drawing.Size(82, 24);
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // btnEliminar
             // 
@@ -212,14 +212,14 @@
             this.btnEliminar.IconSize = 90;
             this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(99, 28);
+            this.btnEliminar.Size = new System.Drawing.Size(99, 24);
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
             // 
             // btnLimpiar
             // 
@@ -230,13 +230,13 @@
             this.btnLimpiar.IconSize = 90;
             this.btnLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(88, 28);
+            this.btnLimpiar.Size = new System.Drawing.Size(88, 24);
             this.btnLimpiar.Text = "LIMPIAR";
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 27);
             // 
             // btnCerrar
             // 
@@ -247,7 +247,7 @@
             this.btnCerrar.IconSize = 90;
             this.btnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(87, 28);
+            this.btnCerrar.Size = new System.Drawing.Size(87, 24);
             this.btnCerrar.Text = "CERRAR";
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
@@ -356,7 +356,6 @@
             this.txtClave.Location = new System.Drawing.Point(11, 306);
             this.txtClave.Margin = new System.Windows.Forms.Padding(4);
             this.txtClave.Name = "txtClave";
-            this.txtClave.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparkleBlue;
             this.txtClave.Size = new System.Drawing.Size(313, 31);
             this.txtClave.StateActive.Border.Color1 = System.Drawing.Color.LightSlateGray;
             this.txtClave.StateActive.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -379,7 +378,6 @@
             this.txtNombreUsuario.Location = new System.Drawing.Point(11, 235);
             this.txtNombreUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreUsuario.Name = "txtNombreUsuario";
-            this.txtNombreUsuario.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparkleBlue;
             this.txtNombreUsuario.Size = new System.Drawing.Size(313, 31);
             this.txtNombreUsuario.StateActive.Border.Color1 = System.Drawing.Color.LightSlateGray;
             this.txtNombreUsuario.StateActive.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));

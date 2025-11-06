@@ -104,27 +104,6 @@ namespace CapaPresentacion
             }
         }
 
-        private void dgvUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            var FilaSeleccionada = dgvUsuarios.SelectedRows[0];
-
-            if (FilaSeleccionada.Index == dgvUsuarios.Rows.Count - 1)
-            {
-                MessageBox.Show("Seleccione una fila valida, por favor,", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            else
-            {
-                txtCodigoUsuario.Text = FilaSeleccionada.Cells[0].Value.ToString();
-                cboxCodigoRol.Text = FilaSeleccionada.Cells[1].Value.ToString();
-                cboxCodigoEmpleado.Text = FilaSeleccionada.Cells[2].Value.ToString();
-                txtNombreUsuario.Text = FilaSeleccionada.Cells[3].Value.ToString();
-                txtClave.Text = FilaSeleccionada.Cells[4].Value.ToString();
-                cboxEstado.Text = FilaSeleccionada.Cells[5].Value.ToString();
-            }
-        }
-
         private void FrmUsuario_Load(object sender, EventArgs e)
         {
             MtdMuestraDatosDGV();
@@ -380,6 +359,27 @@ namespace CapaPresentacion
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var FilaSeleccionada = dgvUsuarios.SelectedRows[0];
+
+            if (FilaSeleccionada.Index == dgvUsuarios.Rows.Count - 1)
+            {
+                MessageBox.Show("Seleccione una fila valida, por favor,", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            else
+            {
+                txtCodigoUsuario.Text = FilaSeleccionada.Cells[0].Value.ToString();
+                cboxCodigoRol.Text = FilaSeleccionada.Cells[1].Value.ToString();
+                cboxCodigoEmpleado.Text = FilaSeleccionada.Cells[2].Value.ToString();
+                txtNombreUsuario.Text = FilaSeleccionada.Cells[3].Value.ToString();
+                txtClave.Text = FilaSeleccionada.Cells[4].Value.ToString();
+                cboxEstado.Text = FilaSeleccionada.Cells[5].Value.ToString();
+            }
         }
     }
 }
